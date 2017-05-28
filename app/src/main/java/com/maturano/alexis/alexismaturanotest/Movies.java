@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.maturano.alexis.alexismaturanotest.adapter.CursorMoviesAdapter;
 import com.maturano.alexis.alexismaturanotest.utils.DataBaseHelper;
@@ -42,6 +43,8 @@ public class Movies extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     String position = (String)view.getTag();
                     Log.i(TAG, "idPelicula = " + position);
+                    Toast msg = Toast.makeText(getApplicationContext(), ("The id from this Movie is :" + position), Toast.LENGTH_LONG);
+                    msg.show();
                 }
             });
         }
