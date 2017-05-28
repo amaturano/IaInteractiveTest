@@ -45,6 +45,9 @@ public class Movies extends AppCompatActivity {
                     Log.i(TAG, "idPelicula = " + position);
                     Toast msg = Toast.makeText(getApplicationContext(), ("The id from this Movie is :" + position), Toast.LENGTH_LONG);
                     msg.show();
+
+                    Intent moviesDetails = new Intent(Movies.this, MovieDetails.class);
+                    startActivity(moviesDetails);
                 }
             });
         }
